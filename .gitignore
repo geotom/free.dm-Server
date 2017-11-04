@@ -1,3 +1,20 @@
+# Eclipse IDE specific
+.settings/
+.externalToolBuilders/
+.recommenders/
+.metadata
+.loadpath
+.recommenders
+*.tmp
+*.bak
+*.pydevproject
+*.project
+*.launch
+.cproject
+.factorypath
+.buildpath
+.target
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
