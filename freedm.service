@@ -1,0 +1,16 @@
+[Unit]
+Description=free.dm Service daemon
+
+[Service]
+Type=simple
+WorkingDirectory=/home/tommi/Projekte/Privat/free.dm/Repository/free.dm Server/
+UMask=0007
+ExecStart="/home/tommi/Projekte/Privat/free.dm/Repository/free.dm Server/server.py" server start
+ExecStop="/home/tommi/Projekte/Privat/free.dm/Repository/free.dm Server/server.py" server stop
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=freedm
+
+[Install]
+WantedBy=multi-user.target
+Alias=freedm.service
