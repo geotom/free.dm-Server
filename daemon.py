@@ -10,5 +10,5 @@ if not os.path.exists('freedm'):
 
 # Run the daemon    
 if __name__ == '__main__':
-    from freedm.daemons.server import ServerDaemon
+    from server.server import ServerDaemon
     s = ServerDaemon()

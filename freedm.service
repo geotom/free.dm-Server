@@ -3,10 +3,10 @@ Description=free.dm Service daemon
 
 [Service]
 Type=simple
-WorkingDirectory=~/Projekte/Privat/free.dm/Repository/free.dm Server/
+WorkingDirectory=/free.dm/
 UMask=0007
-ExecStart="~/Projekte/Privat/free.dm/Repository/free.dm Server/server.py" server start
-ExecStop="~/Projekte/Privat/free.dm/Repository/free.dm Server/server.py" server stop
+ExecStart="/free.dm/daemon.py" server start
+ExecStop="/free.dm/daemon.py" server stop
 StandardOutput=journal
 StandardError=journal
 SyslogIdentifier=freedm
