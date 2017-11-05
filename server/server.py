@@ -50,13 +50,12 @@ class ServerDaemon(NodeDaemon):
         info = super(self.__class__, self).exposed_getSystemInfo()
         # Add some  temporary data
         clients = [dict(
-                        section = 1,
-                        address = '154.587.664.12',
-                        port = 4651,
-                        duration = '00:12:01.54654',
-                        version = 0.3,
-                        state = 'Running'
-                        )
-                   ]
+            section = 1,
+            address = '154.587.664.12',
+            port = 4651,
+            duration = '00:12:01.54654',
+            version = 0.3,
+            state = 'Running'
+            )]
         info['clients'] = clients
         return info
