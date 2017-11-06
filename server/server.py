@@ -4,8 +4,9 @@ The free.dm Server daemon.
 '''
 
 # free.dm Imports
-from freedm.daemons.node import NodeDaemon
-from freedm.data.objects import DatabaseStore
+from freedm.daemons import NodeDaemon
+from freedm.data import SQLStore
+
 
 class ServerDaemon(NodeDaemon):
     '''
@@ -17,15 +18,15 @@ class ServerDaemon(NodeDaemon):
      
     def onDaemonStart(self):
         # Set up PostgreSQL data store
-#         self.data.registerStore(DatabaseStore(**{
-#                                                    'name': 'Database',
-#                                                    'alias': 'database',
-#                                                    'synced': True,
-#                                                    'address': self.data.getConfig('daemon.database.address', 'daemon.database.address'),
-#                                                    'port': self.data.getConfig('daemon.database.port', 'daemon.database.port'),
-#                                                    'user': self.data.getConfig('daemon.database.user', 'daemon.database.user'),
-#                                                    'password': self.data.getConfig('daemon.database.password', 'daemon.database.password')
-#                                                    }))
+#         self.data.registerStore(SQLStore(**{
+#             'name': 'Database',
+#             'alias': 'database',
+#             'synced': True,
+#             'address': self.data.getConfig('daemon.database.address', 'daemon.database.address'),
+#             'port': self.data.getConfig('daemon.database.port', 'daemon.database.port'),
+#             'user': self.data.getConfig('daemon.database.user', 'daemon.database.user'),
+#             'password': self.data.getConfig('daemon.database.password', 'daemon.database.password')
+#             }))
         
         #TODO: Remove. Just for testing
         import time
