@@ -8,7 +8,7 @@ import sys
 # Check import path (for development env)
 if not os.path.exists('freedm'):
     sys.path.append(os.path.realpath(__file__).replace(os.path.basename(__file__), '../free.dm-Common'))
-    
+
 # Run the daemon    
 if __name__ == '__main__':
     from server.server import ServerDaemon
